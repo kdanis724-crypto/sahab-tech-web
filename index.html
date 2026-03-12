@@ -3,146 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahab Tech Group | Luxury Fit-out & Renovation Dubai</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sahab Tech Group | Luxury Fit-out & Technical Solutions Dubai</title>
     <style>
-        :root { --primary: #e63946; --dark: #1a1a1a; --grey: #f4f4f4; --gold: #c5a059; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; scroll-behavior: smooth; }
-        
-        /* Premium Header */
-        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo img { height: 50px; }
-        .nav-call { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        :root { --gold: #D4AF37; --black: #0d0d0d; --gray: #1a1a1a; --white: #ffffff; --green: #25D366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', 'Segoe UI', sans-serif; }
+        body { background-color: var(--black); color: var(--white); line-height: 1.6; }
+
+        /* Navbar with Identity Logo */
+        .navbar { background: var(--white); padding: 10px 5%; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .logo-box { padding: 5px 15px; border: 2px solid var(--black); font-weight: 900; color: var(--black); font-size: 1.4rem; letter-spacing: 1px; }
 
         /* Hero Section */
-        #home { height: 80vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
-        .hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero { height: 70vh; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; border-bottom: 4px solid var(--gold); }
+        .hero h1 { font-size: 3.5rem; color: var(--gold); text-transform: uppercase; margin-bottom: 15px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; max-width: 800px; color: #ddd; }
 
-        /* Stats Section (Our Proud) */
-        #stats { padding: 50px 5%; background: var(--dark); color: white; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; gap: 20px; }
-        .stat-box h2 { color: var(--primary); font-size: 2.5rem; margin: 0; }
+        /* Services Section */
+        .section-header { text-align: center; padding: 60px 20px 20px; }
+        .section-header h2 { font-size: 2.8rem; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; }
+        .section-header p { color: #888; letter-spacing: 1px; }
 
-        /* 3D Service Cards */
-        .section-title { text-align: center; padding: 50px 0 20px; font-size: 2.5rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5% 50px; }
-        .service-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.3s; border-bottom: 5px solid transparent; }
-        .service-card:hover { transform: translateY(-10px); border-bottom: 5px solid var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
-        .service-card h3 { margin-bottom: 15px; color: var(--dark); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding: 40px 8%; }
+        .card { background: var(--gray); border-radius: 20px; padding: 35px; border: 1px solid #333; transition: 0.4s; position: relative; }
+        .card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15); }
+        .card h3 { color: var(--gold); font-size: 1.6rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .card p { color: #ccc; font-size: 0.95rem; }
+        .highlight-card { border: 2px solid var(--gold); background: linear-gradient(145deg, #1a1a1a, #252525); }
 
-        /* Why Choose Us (3D Box) */
-        #why-choose { background: var(--grey); padding: 60px 5%; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .why-box { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 5px 5px 15px rgba(0,0,0,0.05); }
+        /* Explore More Solutions (The "Chamakta" Section) */
+        .explore-more { background: #111; padding: 80px 8%; border-radius: 50px 50px 0 0; margin-top: 50px; }
+        .explore-header { text-align: center; margin-bottom: 50px; }
+        .explore-header h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 15px; }
+        .additional-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .add-item { background: #1a1a1a; padding: 20px; border-left: 5px solid var(--gold); transition: 0.3s; }
+        .add-item:hover { background: var(--gold); }
+        .add-item:hover h4, .add-item:hover p { color: black; }
+        .add-item h4 { color: var(--gold); margin-bottom: 5px; }
+
+        /* Founder Section */
+        .founder { padding: 80px 10%; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; background: #050505; }
+        .founder-img { width: 350px; height: 400px; background: #222; border-radius: 30px; border: 3px solid var(--gold); box-shadow: 0 0 30px rgba(212,175,55,0.2); }
+        .founder-content h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+        .founder-content p { font-size: 1.1rem; color: #aaa; margin-bottom: 20px; }
 
         /* Footer */
-        footer { background: var(--dark); color: white; padding: 50px 5% 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #444; font-size: 0.9rem; }
+        footer { background: #000; padding: 80px 10% 30px; border-top: 1px solid #222; }
+        .f-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; }
+        .f-col h4 { color: var(--gold); margin-bottom: 25px; font-size: 1.2rem; }
+        .f-col p, .f-col li { color: #666; font-size: 0.9rem; margin-bottom: 12px; list-style: none; }
+        .f-bottom { margin-top: 50px; padding-top: 20px; border-top: 1px solid #111; text-align: center; color: #444; font-size: 0.8rem; }
 
-        /* Floating Buttons */
-        .floating-btns { position: fixed; left: 20px; bottom: 20px; z-index: 2000; display: flex; flex-direction: column; gap: 10px; }
-        .btn-float { padding: 12px 20px; border-radius: 50px; color: white; text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .btn-whatsapp { background: #25d366; }
-        .btn-call { background: #007bff; }
+        /* Floating Action */
+        .action-btns { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
+        .fab { padding: 18px 30px; border-radius: 100px; text-decoration: none; font-weight: bold; color: white; display: flex; align-items: center; gap: 12px; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        .fab-wa { background: var(--green); }
+        .fab-call { background: var(--gold); color: black; }
 
-        @media (max-width: 768px) { .hero-content h1 { font-size: 2rem; } }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .services-grid { padding: 20px; }
+            .founder { text-align: center; justify-content: center; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo"><strong>SAHAB TECH</strong></div>
-        <a href="tel:+971567567243" class="nav-call"><i class="fas fa-phone"></i> +971 56 756 7243</a>
-    </header>
+    <nav class="navbar">
+        <div class="logo-box">SAHAB TECH GROUP</div>
+    </nav>
 
-    <section id="home">
-        <div class="hero-content">
-            <h1>Building Your Dreams with <br><span style="color:var(--primary)">Precision & Luxury</span></h1>
-            <p>Expert Interior Fit-Out & Renovation Services in Dubai</p>
-            <a href="https://wa.me/971522126187?text=Hi%20Sahab%20Tech,%20I%20want%20a%20Quick%20Quote" style="background:var(--primary); color:white; padding:15px 30px; text-decoration:none; border-radius:5px; display:inline-block; margin-top:20px; font-weight:bold;">GET A QUICK QUOTE</a>
-        </div>
+    <section class="hero">
+        <h1>Crafting Iconic Spaces</h1>
+        <p>Dubai's Elite Partner for Luxury Fit-outs, Technical Services & Sustainable Energy. Your vision, delivered with 3D precision.</p>
     </section>
 
-    <section id="stats">
-        <div class="stat-box"><h2>15+</h2><p>Years of Experience</p></div>
-        <div class="stat-box"><h2>2500+</h2><p>Projects Finished</p></div>
-        <div class="stat-box"><h2>2930+</h2><p>Professional Colleagues</p></div>
-    </section>
-
-    <h2 class="section-title">Our Premium Services</h2>
-    <div class="services-grid">
-        <div class="service-card" id="office-gallery">
-            <i class="fas fa-building"></i>
-            <h3>Office Fit-out</h3>
-            <p>Premium workspace solutions featuring bespoke glass partitions and luxury corporate designs.</p>
-        </div>
-        <div class="service-card" id="medical-gallery">
-            <i class="fas fa-hospital"></i>
-            <h3>Healthcare & Hospitals</h3>
-            <p>DHA/DOH compliant interiors for Hospitals, Dental Clinics, and Medical Centers.</p>
-        </div>
-        <div class="service-card" id="ac-cleaning">
-            <i class="fas fa-wind"></i>
-            <h3>AC Duct Cleaning</h3>
-            <p>Professional AC Duct disinfection and maintenance for superior air quality.</p>
-        </div>
-        <div class="service-card" id="bathroom-gallery">
-            <i class="fas fa-bath"></i>
-            <h3>Bathroom Renovation</h3>
-            <p>Luxury remodeling and modern fit-outs with premium tiling and sanitary ware.</p>
-        </div>
-        <div class="service-card" id="villa-gallery">
-            <i class="fas fa-home"></i>
-            <h3>Villa Remodeling</h3>
-            <p>Bespoke architectural designs and high-end renovation for luxury residences.</p>
-        </div>
-        <div class="service-card" id="gym-cafe">
-            <i class="fas fa-utensils"></i>
-            <h3>Gym & Cafe</h3>
-            <p>Dynamic and aesthetic interiors for fitness hubs and modern cafe spaces.</p>
-        </div>
+    <div class="section-header">
+        <h2>Expert Solutions We Deliver</h2>
+        <p>Premium Quality | On-Time Delivery | DHA & Municipality Approved</p>
     </div>
 
-    <section id="why-choose">
-        <h2 class="section-title" style="padding-top:0">Why Choose Sahab Tech</h2>
-        <div class="why-grid">
-            <div class="why-box"><h3>Quality Assurance</h3><p>Elite materials and craftsmanship.</p></div>
-            <div class="why-box"><h3>On-Time Delivery</h3><p>We respect your project deadlines.</p></div>
-            <div class="why-box"><h3>24/7 Support</h3><p>Expert technical guidance always available.</p></div>
+    <div class="services-grid">
+        <div class="card"><h3>🏢 Office Fit-out</h3><p>Luxury corporate workspaces designed for productivity. From glass partitions to bespoke furniture, we build environments that inspire.</p></div>
+        <div class="card"><h3>🏥 Healthcare & Hospitals</h3><p>DHA-compliant medical facility interiors. We specialize in sterile, efficient, and patient-friendly healthcare designs.</p></div>
+        <div class="card"><h3>❄️ AC Duct Cleaning Service</h3><p>Professional HVAC hygiene solutions. Specialized duct cleaning and disinfection for healthier home and office air.</p></div>
+        <div class="card highlight-card"><h3>💨 Premium AC Service</h3><p>Complete cooling solutions for home & commercial. From repair to chemical cleaning, we keep Dubai's heat away with efficient HVAC support.</p></div>
+        <div class="card"><h3>🚿 Bathroom Renovation</h3><p>Turn your bathroom into a spa. High-end tiling, luxury sanitary ware, and waterproofed plumbing solutions.</p></div>
+        <div class="card"><h3>🏠 Villa Remodeling</h3><p>Give your home a second life. Complete interior & exterior transformation with modern architectural touches.</p></div>
+        <div class="card"><h3>🏋️ Gym & Cafe Fit-out</h3><p>Dynamic gyms and aesthetic cafes. We create high-traffic commercial spaces that drive business growth.</p></div>
+        <div class="card highlight-card"><h3>⚡ Technical Electrical Services</h3><p>Expert installation and troubleshooting. Our certified electricians ensure your systems are safe, modern, and energy-efficient.</p></div>
+        <div class="card"><h3>🛠️ General Maintenance</h3><p>Reliable upkeep for peace of mind. From minor fixes to routine property maintenance, we keep your space running perfectly.</p></div>
+        <div class="card highlight-card"><h3>☀️ Solar Energy Solutions</h3><p>Future-ready sustainable power. Reduce your DEWA bills with our high-performance solar installations for villas and businesses.</p></div>
+        <div class="card"><h3>🔥 Smart Water Heaters</h3><p>Professional installation of advanced water heating systems. Safety-first setup with energy-saving controls for your comfort.</p></div>
+    </div>
+
+    <section class="explore-more">
+        <div class="explore-header">
+            <h2>Explore More Solutions We Provide</h2>
+            <p>Tailored specialized services to meet your unique project requirements with care and precision.</p>
+        </div>
+        <div class="additional-list">
+            <div class="add-item"><h4>Flooring & Tile Installation</h4><p>Premium marble, parquet, and porcelain finishes.</p></div>
+            <div class="add-item"><h4>Painting & Waterproofing</h4><p>Elite wall finishes and leak-proof protection.</p></div>
+            <div class="add-item"><h4>Electrical Fixture Installation</h4><p>Modern lighting and smart home setups.</p></div>
+            <div class="add-item"><h4>Custom Metal Fabrication</h4><p>Bespoke steel and aluminum architectural work.</p></div>
+            <div class="add-item"><h4>Specialized Support</h4><p>Tailored solutions for unique project needs.</p></div>
+        </div>
+    </section>
+
+    <section class="founder">
+        <div class="founder-img"></div>
+        <div class="founder-content">
+            <h2>The Visionary Leadership</h2>
+            <p>Founded by Samer Boss, Sahab Tech Group stands as a beacon of quality in the UAE fit-out industry. Our mission is to bridge the gap between imagination and reality with unmatched technical expertise.</p>
+            <p><em>"We don't just renovate, we innovate for a better lifestyle." - Samer</em></p>
         </div>
     </section>
 
     <footer>
-        <div class="footer-grid">
-            <div>
-                <h3>About Sahab Tech</h3>
-                <p>Trusted experts for construction, renovation, and elite facility solutions in Dubai.</p>
+        <div class="f-grid">
+            <div class="f-col">
+                <h4>Sahab Tech Group</h4>
+                <p>Leading the way in Dubai's interior transformation and technical maintenance services.</p>
+                <p>📍 Al Quoz, Dubai, UAE</p>
             </div>
-            <div>
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-phone"></i> +971 56 756 7243</p>
-                <p><i class="fas fa-envelope"></i> info@sahabtechgroup.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Business Bay, Dubai, UAE</p>
+            <div class="f-col">
+                <h4>Core Expertise</h4>
+                <li>Corporate Fit-outs</li>
+                <li>Villa Renovations</li>
+                <li>Solar & Technical</li>
+                <li>HVAC Solutions</li>
             </div>
-            <div>
-                <h3>Follow Us</h3>
-                <a href="#" style="color:white; margin-right:15px;"><i class="fab fa-facebook"></i></a>
-                <a href="#" style="color:white;"><i class="fab fa-instagram"></i></a>
+            <div class="f-col">
+                <h4>Reach Us</h4>
+                <p>📞 Call: +971 56 756 7243</p>
+                <p>💬 WA: +971 52 212 6187</p>
+                <p>📧 info@sahabtechgroup.com</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>Copyright © 2026 Sahab Tech Group LLC. | Designed By Saif ali</p>
+        <div class="f-bottom">
+            &copy; 2026 Sahab Tech Group. | All Rights Reserved. | Designed by Saif Ali.
         </div>
     </footer>
 
-    <div class="floating-btns">
-        <a href="https://wa.me/971522126187?text=Hi%20Sahab%20Tech,%20I%20am%20interested%20in%20your%20services" class="btn-float btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> WhatsApp Us
-        </a>
-        <a href="tel:+971567567243" class="btn-float btn-call">
-            <i class="fas fa-phone"></i> Call Now
-        </a>
+    <div class="action-btns">
+        <a href="https://wa.me/971522126187" class="fab fab-wa">WhatsApp Now</a>
+        <a href="tel:+971567567243" class="fab fab-call">Call Samer Boss</a>
     </div>
 
 </body>
