@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahab Tech Group | Luxury Fit-out & Technical Dubai</title>
+    <style>
+        :root { --gold: #D4AF37; --black: #000000; --gray: #0d0d0d; --white: #ffffff; --green: #25D366; --red: #ff4d4d; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--black); color: var(--white); line-height: 1.6; }
+
+        /* Navbar */
+        .navbar { background: var(--white); padding: 10px 5%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
+        .logo-box { width: 160px; border: 2px solid #000; padding: 5px; text-align: center; color: #000; font-weight: 900; }
+        .visit-btn { background: var(--gold); color: #000; padding: 8px 15px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+
+        /* Stats Section */
+        .stats-section { padding: 40px 10%; background: #080808; text-align: center; border-bottom: 1px solid #222; }
+        .stat-number { font-size: 3rem; font-weight: 900; color: var(--red); display: block; }
+        .stat-text { color: #888; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+        /* Main Services Grid (Points 1 to 11 Covered) */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 8%; }
+        .card { background: var(--gray); padding: 25px; border-radius: 15px; border: 1px solid #222; scroll-margin-top: 100px; transition: 0.3s; }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
+        .service-img { width: 100%; height: 180px; border-radius: 10px; margin-bottom: 15px; object-fit: cover; background: #222; border: 1px solid #333; }
+
+        /* Contact Box (Point 14 Covered) */
+        .contact-section { padding: 60px 8%; background: #050505; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .contact-form { background: #111; padding: 30px; border-radius: 20px; border: 1px solid #333; }
+        .contact-form h2 { color: var(--gold); margin-bottom: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: #000; border: 1px solid #333; color: white; border-radius: 8px; }
+        .submit-btn { width: 100%; background: var(--gold); color: black; padding: 15px; border: none; font-weight: bold; border-radius: 8px; cursor: pointer; text-transform: uppercase; }
+
+        /* Footer & Social (Points 12 & 13 Covered) */
+        footer { padding: 60px 10% 20px; background: #000; border-top: 1px solid #222; }
+        .f-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .f-title { color: var(--gold); margin-bottom: 20px; font-weight: bold; font-size: 1.3rem; }
+        .f-col li { list-style: none; color: #888; margin-bottom: 10px; font-size: 0.9rem; }
+        .social-icons { display: flex; gap: 15px; margin-top: 15px; }
+        .social-icons img { width: 32px; filter: brightness(0.9); transition: 0.3s; }
+        .social-icons img:hover { transform: scale(1.1); filter: brightness(1); }
+        .copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #111; color: #444; font-size: 0.8rem; }
+
+        /* Floating Action Buttons */
+        .action-btns { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
+        .fab { padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; font-size: 12px; min-width: 170px; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .fab-wa { background: var(--green); color: white; }
+        .fab-call { background: var(--gold); color: black; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-box">SAHAB TECH GROUP</div>
+        <a href="https://sahabtechgroup.com" class="visit-btn">Main Portal</a>
+    </nav>
+
+    <section class="stats-section">
+        <div style="margin-bottom: 20px;"><span class="stat-number">15+</span><span class="stat-text">Years Experience</span></div>
+        <div style="margin-bottom: 20px;"><span class="stat-number">2500+</span><span class="stat-text">Projects Finished</span></div>
+    </section>
+
+    <div class="services-grid">
+        <div id="ac-service" class="card">
+            <img src="ac-service.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400'">
+            <h3>❄️ AC Service (Home & Commercial)</h3>
+            <p>Expert chemical cleaning, repair, and gas top-up for villas and businesses.</p>
+        </div>
+
+        <div id="bathroom" class="card">
+            <img src="bathroom.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400'">
+            <h3>🚿 Bathroom Renovation</h3>
+            <p>Luxury tiling, plumbing, and premium sanitary installation.</p>
+        </div>
+
+        <div id="villa" class="card">
+            <img src="villa.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400'">
+            <h3>🏠 Villa Renovation</h3>
+            <p>High-end interior and exterior transformations for luxury homes.</p>
+        </div>
+
+        <div id="ac-duct" class="card">
+            <img src="duct.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?w=400'">
+            <h3>🌬️ AC Duct Cleaning</h3>
+            <p>Deep disinfection and dust removal for healthy indoor air quality.</p>
+        </div>
+
+        <div id="general" class="card">
+            <img src="general.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400'">
+            <h3>🛠️ General Maintenance</h3>
+            <p>24/7 property upkeep and quick emergency technical repairs.</p>
+        </div>
+
+        <div id="solar" class="card">
+            <img src="solar.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1509315811347-67fd0e151142?w=400'">
+            <h3>☀️ Solar Panel Installation</h3>
+            <p>DEWA-approved sustainable energy solutions for bill reduction.</p>
+        </div>
+
+        <div id="electrical" class="card">
+            <img src="electrical.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1621905252507-b354bcadcabc?w=400'">
+            <h3>⚡ Technical Electrical Services</h3>
+            <p>Smart lighting, wiring troubleshooting, and MEP maintenance.</p>
+        </div>
+
+        <div id="gym-cafe" class="card">
+            <img src="gym.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400'">
+            <h3>🏋️ Gym & Cafe Fit-out</h3>
+            <p>Modern commercial setups designed for growth and aesthetics.</p>
+        </div>
+
+        <div id="warehouse" class="card">
+            <img src="warehouse.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400'">
+            <h3>🏭 Warehouse Renovation</h3>
+            <p>Industrial fit-outs, heavy-duty flooring, and structural remodeling.</p>
+        </div>
+
+        <div id="office" class="card">
+            <img src="office.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=400'">
+            <h3>🏢 Office Fit-out Service</h3>
+            <p>Luxury corporate interiors and ergonomic workspace designs.</p>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-form">
+            <h2>Get A Quick Quote</h2>
+            <form action="mailto:info@sahabtechgroup.com" method="post" enctype="text-plain">
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="text" placeholder="Mobile Number" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+        <div style="padding: 20px;">
+            <h2 style="color:var(--gold);">Company Vision</h2>
+            <p>Sahab Tech Group brings elite technical expertise and sustainable energy solutions to Dubai's premium properties.</p>
+            <p style="margin-top: 20px; font-weight: bold; color: var(--gold);">📍 Al Quoz & Business Bay, Dubai</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="f-grid">
+            <div class="f-col">
+                <div class="f-title">Sahab Tech Group</div>
+                <p>Dubai's leader in premium maintenance and fit-out solutions.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61586429807235" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
+                    <a href="https://www.instagram.com/sahabtechgroupllc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
+                </div>
+            </div>
+            <div class="f-col">
+                <div class="f-title">Core Services</div>
+                <li>Villa & Office Renovation</li>
+                <li>AC Duct & HVAC Service</li>
+                <li>Solar Panel Installation</li>
+            </div>
+            <div class="f-col">
+                <div class="f-title">Contact & Location</div>
+                <li><a href="https://maps.app.goo.gl/YourMapLink" target="_blank" style="color:#888; text-decoration:none;">📍 Al Quoz Industrial 1, Dubai, UAE</a></li>
+                <li>📞 +971 56 756 7243</li>
+                <li>📧 info@sahabtechgroup.com</li>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Sahab Tech Group. | All Rights Reserved.<br>Designed by Saif Ali
+        </div>
+    </footer>
+
+    <div class="action-btns">
+        <a href="https://wa.me/971522126187" class="fab fab-wa">WhatsApp Now</a>
+        <a href="tel:+971567567243" class="fab fab-call">Call Now</a>
+    </div>
+
+</body>
+</html>
