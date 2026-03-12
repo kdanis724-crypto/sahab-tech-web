@@ -3,123 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahab Tech Group | Luxury Fit-out & Technical Dubai</title>
+    <title>Sahab Tech Group | Luxury Fit-out Dubai</title>
     <style>
-        :root { --gold: #D4AF37; --black: #0d0d0d; --white: #ffffff; --red: #e63946; }
+        :root { --gold: #D4AF37; --black: #0d0d0d; --gray: #1a1a1a; --white: #ffffff; --green: #25D366; --red: #ff4d4d; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: var(--black); color: var(--white); scroll-behavior: smooth; }
-        
+        body { background-color: var(--black); color: var(--white); }
+
         /* Navbar */
-        .navbar { background: var(--white); padding: 10px 5%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .logo-box { display: flex; align-items: center; text-decoration: none; }
-        .logo-box img { height: 50px; margin-right: 12px; }
-        .brand-name { color: black; font-weight: 900; font-size: 1.4rem; letter-spacing: 1px; }
+        .navbar { background: var(--white); padding: 10px 5%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
+        .logo-box { width: 55px; height: 55px; border: 2px solid var(--black); display: flex; align-items: center; justify-content: center; }
+        .brand-name { font-weight: 900; color: var(--black); font-size: 1.2rem; margin-left: 10px; }
+        .visit-btn { background: var(--gold); color: black; padding: 8px 15px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+
+        /* Stats Section (RESTORED from Image) */
+        .stats-section { padding: 60px 10%; text-align: center; background: #080808; border-bottom: 1px solid #222; }
+        .stat-box { margin-bottom: 40px; }
+        .stat-number { font-size: 3.5rem; font-weight: 900; color: var(--red); display: block; }
+        .stat-text { font-size: 1rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Experience/Visionary Title */
+        .vision-title { color: var(--gold); font-size: 1.8rem; text-align: center; margin-bottom: 20px; font-weight: bold; }
+
+        /* Rest of the styles... (Same as previous to keep it fast) */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 8%; }
+        .card { background: var(--gray); padding: 25px; border-radius: 15px; border: 1px solid #333; scroll-margin-top: 100px; }
+        .service-img { width: 100%; height: 180px; border-radius: 10px; margin-bottom: 15px; object-fit: cover; }
         
-        /* Hero Section */
-        .hero { height: 70vh; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; border-bottom: 4px solid var(--gold); }
-        .hero h1 { font-size: 3.5rem; color: var(--white); text-transform: uppercase; margin-bottom: 10px; }
-        .hero h1 span { color: var(--gold); }
-        .hero p { font-size: 1.2rem; color: #ccc; max-width: 800px; margin-bottom: 30px; }
-        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
-        .hero-btn { padding: 15px 40px; background: var(--gold); color: black; text-decoration: none; font-weight: bold; border-radius: 5px; text-transform: uppercase; transition: 0.3s; }
-        .hero-btn:hover { background: white; transform: scale(1.05); }
-
-        /* Stats Section */
-        .stats-container { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 60px 10%; background: #080808; text-align: center; border-bottom: 1px solid #222; }
-        .stat-box h2 { color: var(--gold); font-size: 3rem; margin-bottom: 5px; }
-        .stat-box p { color: #888; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-
-        /* Services Grid */
-        .section-title { text-align: center; padding: 60px 20px 20px; font-size: 2.5rem; color: var(--gold); text-transform: uppercase; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 40px 8%; }
-        .card { background: #1a1a1a; padding: 35px; border-radius: 20px; border: 1px solid #333; transition: 0.4s; }
-        .card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(212,175,55,0.1); }
-        .card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
-        .card p { color: #bbb; line-height: 1.6; font-size: 0.95rem; }
+        /* Founder Section */
+        .founder { padding: 60px 10%; background: #050505; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .founder-img { width: 350px; height: 450px; border: 3px solid var(--gold); border-radius: 20px; overflow: hidden; }
+        .founder-img img { width: 100%; height: 100%; object-fit: cover; }
 
         /* Footer */
-        footer { background: #000; padding: 80px 10% 40px; border-top: 2px solid var(--gold); margin-top: 50px; }
-        .f-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; }
-        .f-col h4 { color: var(--gold); margin-bottom: 25px; text-transform: uppercase; font-size: 1.1rem; }
-        .f-col p { color: #888; margin-bottom: 12px; font-size: 0.9rem; }
-        .social-icons { display: flex; gap: 20px; margin-top: 20px; }
-        .social-icons img { width: 38px; transition: 0.3s; filter: brightness(1.1); }
-        .social-icons img:hover { transform: translateY(-5px); filter: brightness(1.5); }
+        footer { padding: 60px 10% 20px; background: #000; border-top: 1px solid #222; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .social-icons { display: flex; gap: 15px; margin: 15px 0; }
+        .social-icons img { width: 35px; }
+        .copyright-bar { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #111; color: #444; font-size: 0.8rem; }
 
-        /* Floating Action Buttons */
-        .action-btns { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
-        .fab { padding: 16px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; display: flex; align-items: center; gap: 12px; min-width: 200px; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-transform: uppercase; font-size: 14px; transition: 0.3s; }
-        .fab-wa { background: #25D366; }
+        /* Action Buttons */
+        .action-btns { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
+        .fab { padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 160px; justify-content: center; }
+        .fab-wa { background: var(--green); }
         .fab-call { background: var(--gold); color: black; }
-        .fab:hover { transform: scale(1.05); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .stat-box { width: 100%; margin-bottom: 30px; }
-        }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="https://sahabtechgroup.com" target="_blank" class="logo-box">
-            <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
+        <div style="display: flex; align-items: center;">
+            <div class="logo-box">Logo</div>
             <span class="brand-name">SAHAB TECH GROUP</span>
-        </a>
-        <a href="https://sahabtechgroup.com" target="_blank" style="color:black; font-weight:bold; text-decoration:none; border: 1px solid black; padding: 5px 15px; border-radius: 5px;">Visit Gallery</a>
+        </div>
+        <a href="#" class="visit-btn">Visit Main Website</a>
     </nav>
 
-    <section class="hero">
-        <h1>Building Dreams with <span>Precision</span></h1>
-        <p>Premium Luxury Fit-outs, Technical Maintenance & Solar Solutions in Dubai.</p>
-        <div class="hero-btns">
-            <a href="https://wa.me/971522126187?text=Hello%20Sahab%20Tech,%20I%20want%20a%20quick%20quote%20for%20my%20project!" class="hero-btn">Get A Quick Quote</a>
+    <section class="stats-section">
+        <div class="stat-box">
+            <span class="stat-number">15+</span>
+            <span class="stat-text">Years of Experience</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">2500+</span>
+            <span class="stat-text">Projects Finished</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">2930+</span>
+            <span class="stat-text">Professional Colleagues</span>
         </div>
     </section>
 
-    <div class="stats-container">
-        <div class="stat-box"><h2>15+</h2><p>Years of Experience</p></div>
-        <div class="stat-box"><h2>2500+</h2><p>Projects Completed</p></div>
-        <div class="stat-box"><h2>2930+</h2><p>Happy Clients</p></div>
-    </div>
-
-    <h2 class="section-title">Our Premium Services</h2>
     <div class="services-grid">
-        <div class="card"><h3>🏢 Office Fit-out</h3><p>Luxury workspaces designed with 3D precision for maximum productivity.</p></div>
-        <div class="card"><h3>🏥 Healthcare & Medical</h3><p>DHA-compliant interior solutions for hospitals and clinics in the UAE.</p></div>
-        <div class="card"><h3>⚡ Technical Services</h3><p>Professional electrical installation, repair, and 24/7 technical support.</p></div>
-        <div class="card"><h3>☀️ Solar Energy</h3><p>Sustainable solar power systems for villas and businesses to reduce energy costs.</p></div>
-        <div class="card"><h3>🏠 Villa Remodeling</h3><p>Bespoke renovation and modernization for luxury residences in Dubai.</p></div>
-        <div class="card"><h3>❄️ AC Duct Service</h3><p>High-quality AC maintenance, duct cleaning, and HVAC hygiene solutions.</p></div>
-    </div>
+        <div id="warehouse" class="card">
+            <img src="warehouse.jpg" alt="Warehouse" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400'">
+            <h3 style="color:var(--gold);">🏭 Warehouse Renovation</h3>
+            <p>Industrial fit-outs and structural remodeling in Dubai.</p>
+        </div>
+        </div>
+
+    <section class="founder">
+        <div class="founder-img">
+            <img src="boss.jpg" alt="Samer Boss" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400'">
+        </div>
+        <div class="founder-content">
+            <div class="vision-title">Visionary Leadership</div>
+            <p style="color:#aaa; font-style: italic; margin-bottom: 20px;">"Founded by Samer Boss, Sahab Tech Group stands as a beacon of quality in the UAE fit-out industry. We bridge the gap between imagination and reality."</p>
+            <p style="color:#888;">- Samer</p>
+        </div>
+    </section>
 
     <footer>
-        <div class="f-container">
-            <div class="f-col">
-                <h4>Sahab Tech Group</h4>
-                <p>Trusted experts for construction, renovation, and elite facility solutions in Dubai since 15+ years.</p>
-                <a href="https://sahabtechgroup.com" target="_blank" style="color:var(--gold); text-decoration:none;">→ Visit Main Portal</a>
-            </div>
-            <div class="f-col">
-                <h4>Follow Our Live Projects</h4>
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:var(--gold); margin-bottom: 15px;">Sahab Tech Group</h4>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/sahabtechgroupllc?igsh=MTMwNXBrbXFuZjJldQ==" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61586429807235&mibextid=ZbWKwL" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook">
-                    </a>
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG">
                 </div>
             </div>
-            <div class="f-col">
-                <h4>Contact Us</h4>
-                <p>📍 Al Quoz, Dubai, UAE</p>
+            <div>
+                <h4 style="color:var(--gold); margin-bottom: 15px;">Contact Details</h4>
                 <p>📞 +971 56 756 7243</p>
-                <p>💬 +971 52 212 6187</p>
+                <p>📧 info@sahabtechgroup.com</p>
             </div>
         </div>
-        <div style="text-align:center; margin-top: 60px; color:#444; font-size: 0.8rem; border-top: 1px solid #111; padding-top: 20px;">
-            &copy; 2026 Sahab Tech Group LLC. | All Rights Reserved. | Designed by Saif Ali.
+        
+        <div class="copyright-bar">
+            © 2026 Sahab Tech Group. | All Rights Reserved. | Designed by Saif Ali
         </div>
     </footer>
 
