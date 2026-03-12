@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sahab Tech Group | Luxury Fit-out & Technical Dubai</title>
+    <style>
+        :root { --gold: #D4AF37; --black: #000000; --gray: #0d0d0d; --white: #ffffff; --green: #25D366; --red: #ff4d4d; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background-color: var(--black); color: var(--white); line-height: 1.6; overflow-x: hidden; }
+
+        /* Navbar */
+        .navbar { background: var(--white); padding: 12px 5%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
+        .logo-box { width: 140px; border: 2px solid #000; padding: 4px; text-align: center; color: #000; font-weight: 900; font-size: 0.9rem; }
+        .visit-btn { background: var(--gold); color: #000; padding: 6px 12px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 0.8rem; }
+
+        /* Experience Stats (15+ Years) */
+        .stats-section { padding: 35px 5%; background: #080808; text-align: center; border-bottom: 1px solid #222; }
+        .stat-number { font-size: 2.8rem; font-weight: 900; color: var(--red); line-height: 1; }
+        .stat-text { color: #888; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; }
+
+        /* Section Headings */
+        .section-title { padding: 30px 5% 10px; color: var(--gold); text-align: center; font-size: 1.4rem; text-transform: uppercase; font-weight: 800; }
+
+        /* Core Services (Google IDs Included) */
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px 5%; }
+        @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+        .card { background: var(--gray); padding: 20px; border-radius: 15px; border: 1px solid #222; }
+        .card h3 { color: var(--gold); margin-bottom: 10px; font-size: 1.1rem; }
+        .service-img { width: 100%; height: 200px; border-radius: 10px; margin-bottom: 15px; object-fit: cover; background: #222; border: 1px solid #333; }
+
+        /* Explore More Solutions */
+        .explore-section { padding: 20px 5% 40px; background: #000; }
+        .more-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        @media (min-width: 768px) { .more-grid { grid-template-columns: repeat(2, 1fr); } }
+        .more-card { background: #111; padding: 20px; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; }
+        .more-card h4 { color: var(--gold); font-size: 1.1rem; margin-bottom: 5px; }
+        .more-card p { color: #888; font-size: 0.85rem; }
+
+        /* Footer & Social */
+        footer { padding: 40px 5% 120px; background: #000; border-top: 1px solid #222; }
+        .social-promo { color: var(--gold); font-size: 0.9rem; margin-bottom: 15px; font-weight: bold; line-height: 1.4; }
+        .social-icons { display: flex; gap: 15px; margin-bottom: 30px; }
+        .social-icons img { width: 38px; height: 38px; }
+        
+        .footer-info h4 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
+        .footer-info li { list-style: none; color: #888; margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-info a { color: #888; text-decoration: none; }
+        .copyright { text-align: center; margin-top: 30px; color: #444; font-size: 0.75rem; border-top: 1px solid #111; padding-top: 20px; }
+
+        /* Floating Action Buttons (Maximized) */
+        .action-btns { position: fixed; bottom: 0; left: 0; width: 100%; display: grid; grid-template-columns: 1fr 1fr; z-index: 9999; background: #000; padding: 10px; border-top: 1px solid #222; }
+        .fab { padding: 15px; text-decoration: none; font-weight: 900; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; text-transform: uppercase; border-radius: 10px; margin: 0 5px; }
+        .fab-wa { background: var(--green); color: white; }
+        .fab-call { background: var(--gold); color: black; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-box">SAHAB TECH GROUP</div>
+        <a href="https://sahabtechgroup.com" class="visit-btn">VISIT PORTAL</a>
+    </nav>
+
+    <section class="stats-section">
+        <div style="margin-bottom: 20px;">
+            <span class="stat-number">15+</span>
+            <span class="stat-text">Years of Experience</span>
+        </div>
+        <div>
+            <span class="stat-number">2500+</span>
+            <span class="stat-text">Projects Finished</span>
+        </div>
+    </section>
+
+    <h2 class="section-title">Core Technical Services</h2>
+    <div class="services-grid">
+        <div id="ac-service" class="card">
+            <img src="ac-service.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400'">
+            <h3>❄️ AC Service & Duct Cleaning</h3>
+            <p>Premium HVAC chemical cleaning and repair across Dubai.</p>
+        </div>
+        <div id="villa" class="card">
+            <img src="villa.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400'">
+            <h3>🏠 Villa & Bathroom Fit-out</h3>
+            <p>Luxury remodeling and modern technical transformations.</p>
+        </div>
+        <div id="commercial" class="card">
+            <img src="office.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=400'">
+            <h3>🏢 Office & Warehouse Renovation</h3>
+            <p>Industrial structural fit-outs and ergonomic corporate designs.</p>
+        </div>
+        <div id="solar" class="card">
+            <img src="solar.jpg" class="service-img" onerror="this.src='https://images.unsplash.com/photo-1509315811347-67fd0e151142?w=400'">
+            <h3>☀️ Solar & Technical Services</h3>
+            <p>DEWA approved sustainable power and MEP solutions.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Explore More Solutions</h2>
+    <section class="explore-section">
+        <div class="more-grid">
+            <div class="more-card"><h4>Painting & Waterproofing</h4><p>Elite wall finishes and advanced leak protection.</p></div>
+            <div class="more-card"><h4>Flooring & Tiles</h4><p>Marble, parquet, and porcelain installation experts.</p></div>
+            <div class="more-card"><h4>Electrical Fixtures</h4><p>Smart lighting and full power troubleshooting.</p></div>
+            <div class="more-card"><h4>Metal Fabrication</h4><p>Bespoke steel and aluminum fabrication work.</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="social-promo">Stay updated with our daily projects transforming on social media:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61586429807235" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
+            <a href="https://www.instagram.com/sahabtechgroupllc" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
+        </div>
+
+        <div class="footer-info">
+            <h4>Reach Us</h4>
+            <li>📍 <a href="https://www.google.com/maps/search/Al+Quoz+Industrial+1+Dubai" target="_blank">Al Quoz Industrial 1, Dubai, UAE (Open Map)</a></li>
+            <li>📞 Call: +971 56 756 7243</li>
+            <li>💬 WA: +971 52 212 6187</li>
+            <li>📧 Email: info@sahabtechgroup.com</li>
+        </div>
+        <div class="copyright">© 2026 Sahab Tech Group. | Designed by Saif Ali</div>
+    </footer>
+
+    <div class="action-btns">
+        <a href="https://wa.me/971522126187?text=Hello%20Sahab%20Tech,%20I%20am%20interested%20in%20your%20services.%20Please%20send%20more%20details." class="fab fab-wa">WhatsApp</a>
+        <a href="tel:+971567567243" class="fab fab-call">Call Now</a>
+    </div>
+
+</body>
+</html>
